@@ -34,7 +34,6 @@ export default function Slider({
                 </div>
             )}
 
-            {/* Slider */}
             <input
                 type="range"
                 min={min}

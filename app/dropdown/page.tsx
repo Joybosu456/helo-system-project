@@ -33,7 +33,6 @@ export default function DropdownPage() {
         <CommonDropdown label="Label" placeholder="Select" options={sampleOptions} value={single} onChange={setSingle} state="disabled" />
         <CommonDropdown label="Label" placeholder="Select" options={sampleOptions} value={single} onChange={setSingle} state="disabled" darkPlaceholder={true} />
 
-        {/* Multi / tags examples */}
         <CommonDropdown
           label="Label"
           placeholder="Select multiple tags"

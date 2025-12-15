@@ -12,9 +12,9 @@ interface Option {
 interface CommonDropdownProps {
   label?: string;
   placeholder?: string;
-  value?: string; // single
+  value?: string; 
   onChange?: (value: string) => void;
-  selected?: string[]; // multi
+  selected?: string[]; 
   onChangeSelected?: (selected: string[]) => void;
   state?: DropdownState;
   message?: string;

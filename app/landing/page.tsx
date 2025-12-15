@@ -9,7 +9,6 @@ export default function LandingPage() {
     return (
         <div className="max-w-4xl mx-auto p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Default State */}
                 <CommonInput
                     label="Label"
                     placeholder="Placeholder text"
@@ -22,7 +21,6 @@ export default function LandingPage() {
                     darkPlaceholder={true}
                 />
 
-                {/* Focus State */}
                 <CommonInput
                     label="Label"
                     placeholder="Placeholder text"
@@ -39,7 +37,6 @@ export default function LandingPage() {
                     darkPlaceholder={true}
                 />
 
-                {/* Success State */}
                 <CommonInput
                     label="Label"
                     placeholder="Placeholder text"
@@ -56,7 +53,6 @@ export default function LandingPage() {
                     darkPlaceholder={true}
                 />
 
-                {/* Error State */}
                 <CommonInput
                     label="Label"
                     placeholder="Placeholder text"
@@ -73,7 +69,6 @@ export default function LandingPage() {
                     darkPlaceholder={true}
                 />
 
-                {/* Disabled State */}
                 <CommonInput
                     label="Label"
                     placeholder="Placeholder text"

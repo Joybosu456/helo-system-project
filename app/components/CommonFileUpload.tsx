@@ -13,9 +13,9 @@ export interface UploadedFile {
 
 interface CommonFileUploadProps {
   label?: string;
-  accept?: string; // e.g., ".png,.jpg,.pdf" or "image/*,application/pdf"
+  accept?: string; 
   multiple?: boolean;
-  maxSize?: number; // in bytes
+  maxSize?: number; 
   onFilesChange?: (files: UploadedFile[]) => void;
   onFileRemove?: (fileId: string) => void;
   onFilePreview?: (file: UploadedFile) => void;
@@ -122,7 +122,6 @@ export default function CommonFileUpload({
 
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     processFiles(e.target.files);
-    // Reset input so the same file can be selected again
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
@@ -179,7 +178,6 @@ export default function CommonFileUpload({
       >
         <div className="p-6 text-center">
           <div className="flex flex-col items-center justify-center space-y-3">
-            {/* Document Icon */}
             <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -223,7 +221,6 @@ export default function CommonFileUpload({
         />
       </div>
 
-      {/* File List */}
       {files.length > 0 && (
         <div className="mt-4 space-y-2 w-[300px]">
           {files.map((file) => (
@@ -231,7 +228,6 @@ export default function CommonFileUpload({
               key={file.id}
               className="flex items-center gap-2 p-2 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              {/* File Icon */}
               <div className="flex-shrink-0">
                 <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -243,7 +239,6 @@ export default function CommonFileUpload({
                 </svg>
               </div>
 
-              {/* File Info */}
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-900 truncate">{file.name}</p>
                 <button
@@ -256,7 +251,6 @@ export default function CommonFileUpload({
                 </button>
               </div>
 
-              {/* Remove Button */}
               <button
                 type="button"
                 onClick={() => handleRemove(file.id)}
@@ -273,7 +267,6 @@ export default function CommonFileUpload({
         </div>
       )}
 
-      {/* Message/Error */}
       {(message || error) && (
         <div className="mt-2 flex items-center text-sm">
           <span className={`mr-2 ${messageState === "error" ? "text-red-600" : messageState === "success" ? "text-green-600" : "text-gray-600"}`}>

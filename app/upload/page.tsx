@@ -17,8 +17,6 @@ export default function UploadPage() {
 
   const handleFilePreview = (file: UploadedFile) => {
     console.log("Preview file:", file);
-    // You can implement preview logic here
-    // For example, open a modal or navigate to a preview page
     if (file.type.startsWith("image/")) {
       const url = URL.createObjectURL(file.file);
       window.open(url, "_blank");
@@ -35,8 +33,7 @@ export default function UploadPage() {
       <h2 className="text-2xl font-bold mb-6">File Upload Demo</h2>
 
       <div className="space-y-6">
-        {/* Default State */}
-        <div>
+          <div>
           <h3 className="text-lg font-semibold mb-4">Default</h3>
           <CommonFileUpload
             label="Upload Files"
@@ -48,7 +45,6 @@ export default function UploadPage() {
           />
         </div>
 
-        {/* Success State */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Success State</h3>
           <CommonFileUpload
@@ -63,7 +59,6 @@ export default function UploadPage() {
           />
         </div>
 
-        {/* Error State */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Error State</h3>
           <CommonFileUpload
@@ -78,7 +73,6 @@ export default function UploadPage() {
           />
         </div>
 
-        {/* Disabled State */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Disabled State</h3>
           <CommonFileUpload
@@ -93,7 +87,6 @@ export default function UploadPage() {
           />
         </div>
 
-        {/* Single File Upload */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Single File Upload</h3>
           <CommonFileUpload
@@ -106,7 +99,6 @@ export default function UploadPage() {
           />
         </div>
 
-        {/* Custom Accept Types */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Custom File Types (Images Only)</h3>
           <CommonFileUpload
